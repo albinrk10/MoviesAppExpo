@@ -1,4 +1,4 @@
-import { Cast } from '@/infrastructure/interfaces/cast';
+import { Cast } from '@/src/infrastructure/interfaces/cast';
 import { Image, Text, View } from 'react-native';
 
 

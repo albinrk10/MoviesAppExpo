@@ -1,4 +1,4 @@
-import { Movie } from '@/infrastructure/interfaces/movie.interface';
+import { Movie } from '@/src/infrastructure/interfaces/movie.interface';
 import React, { useEffect, useRef } from 'react';
 import { FlatList, NativeScrollEvent, NativeSyntheticEvent, Text, View } from 'react-native';
 import MoviePoster from './MoviePoster';

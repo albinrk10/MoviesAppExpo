@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { CompleteMovie } from '@/infrastructure/interfaces/movie.interface';
-import { Formatter } from '@/config/helpers/formatter';
+import { Formatter } from '@/src/config/helpers/formatter';
+import { CompleteMovie } from '@/src/infrastructure/interfaces/movie.interface';
+import React from 'react';
+import { Text, View } from 'react-native';
 
 
 interface Props {

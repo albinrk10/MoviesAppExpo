@@ -1,7 +1,7 @@
-import { nowPlayingAction } from "@/core/actions/movies/now-playing.action"
-import { popularMoviesAction } from "@/core/actions/movies/popular.action"
-import { topRatedAction } from "@/core/actions/movies/top-rated.action"
-import { upcomingMoviesAction } from "@/core/actions/movies/upcoming.action"
+import { nowPlayingAction } from "@/src/core/actions/movies/now-playing.action"
+import { popularMoviesAction } from "@/src/core/actions/movies/popular.action"
+import { topRatedAction } from "@/src/core/actions/movies/top-rated.action"
+import { upcomingMoviesAction } from "@/src/core/actions/movies/upcoming.action"
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query"
 
 export const useMovies = () => {
