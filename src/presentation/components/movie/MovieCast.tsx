@@ -1,4 +1,4 @@
-import { Cast } from '@/src/infrastructure/interfaces/cast';
+import { Cast } from '@/infrastructure/interfaces/cast';
 import React from 'react';
 import { Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';

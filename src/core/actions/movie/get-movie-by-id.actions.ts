@@ -1,7 +1,7 @@
-import { movieApi } from "@/src/core/api/movie-api";
-import { CompleteMovie } from "@/src/infrastructure/interfaces/movie.interface";
-import { MovieDBMovieResponse } from "@/src/infrastructure/interfaces/moviedb-movie.response";
-import { MovieMapper } from "@/src/infrastructure/mappers/movie.mapper";
+import { movieApi } from "@/core/api/movie-api";
+import { CompleteMovie } from "@/infrastructure/interfaces/movie.interface";
+import { MovieDBMovieResponse } from "@/infrastructure/interfaces/moviedb-movie.response";
+import { MovieMapper } from "@/infrastructure/mappers/movie.mapper";
 
 export const getMovieByIdAction = async (id: number | string):Promise<CompleteMovie> => {
     try {

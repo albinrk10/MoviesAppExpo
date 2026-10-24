@@ -83,12 +83,15 @@ Escanea el código QR con Expo Go. También puedes presionar `a` para Android, `
 ## 📁 Estructura del proyecto
 
 ```text
-app/                 Pantallas y rutas de Expo Router
-  home/              Catálogo principal
-  movie/             Detalle de película
-core/                API y acciones de datos
-infrastructure/      Interfaces y mapeadores de TMDB
-presentation/        Componentes y hooks de interfaz
+src/
+  app/               Pantallas y rutas de Expo Router
+    home/            Catálogo principal
+    movie/           Detalle de película
+  core/              API y acciones de datos
+  infrastructure/    Interfaces y mapeadores de TMDB
+  presentation/      Componentes y hooks de interfaz
+  config/            Utilidades de configuración
+  global.css         Estilos globales de NativeWind
 assets/              Iconos e imágenes
 ```
 

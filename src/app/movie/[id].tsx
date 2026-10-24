@@ -1,7 +1,7 @@
-import MovieCast from '@/src/presentation/components/movie/MovieCast';
-import MovieDescription from '@/src/presentation/components/movie/MovieDescription';
-import MovieHeader from '@/src/presentation/components/movie/MovieHeader';
-import { useMovie } from '@/src/presentation/hooks/useMovie';
+import MovieCast from '@/presentation/components/movie/MovieCast';
+import MovieDescription from '@/presentation/components/movie/MovieDescription';
+import MovieHeader from '@/presentation/components/movie/MovieHeader';
+import { useMovie } from '@/presentation/hooks/useMovie';
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';

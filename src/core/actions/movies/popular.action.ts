@@ -1,6 +1,6 @@
-import { movieApi } from "@/src/core/api/movie-api";
-import { MovieDBMoviesResponse } from "@/src/infrastructure/interfaces/moviedb-response";
-import { MovieMapper } from "@/src/infrastructure/mappers/movie.mapper";
+import { movieApi } from "@/core/api/movie-api";
+import { MovieDBMoviesResponse } from "@/infrastructure/interfaces/moviedb-response";
+import { MovieMapper } from "@/infrastructure/mappers/movie.mapper";
 
 export const popularMoviesAction = async () => {
     try {

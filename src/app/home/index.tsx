@@ -1,6 +1,6 @@
-import MainSlideshow from '@/src/presentation/components/movies/MainSlideshow';
-import MovieHorizontalList from '@/src/presentation/components/movies/MovieHorizontalList';
-import { useMovies } from '@/src/presentation/hooks/useMovies';
+import MainSlideshow from '@/presentation/components/movies/MainSlideshow';
+import MovieHorizontalList from '@/presentation/components/movies/MovieHorizontalList';
+import { useMovies } from '@/presentation/hooks/useMovies';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
