@@ -40,7 +40,6 @@ Consulta películas en cartelera, revisa selecciones populares y mejor calificad
 | [TypeScript](https://www.typescriptlang.org/) | Tipado del proyecto |
 | [NativeWind](https://www.nativewind.dev/) | Estilos con clases de utilidad |
 | [Axios](https://axios-http.com/) | Solicitudes a la API |
-| [TanStack Query](https://tanstack.com/query/latest) | Carga y paginación de datos |
 | [TMDB](https://developer.themoviedb.org/docs) | Catálogo de películas y reparto |
 
 ## 🚀 Instalación
