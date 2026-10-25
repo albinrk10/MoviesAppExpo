@@ -1,30 +1,44 @@
-import { Cast } from '@/infrastructure/interfaces/cast';
-import { Image, Text, View } from 'react-native';
+import type { Cast } from "@/domain/entities/cast.entity";
+import { cinema } from "@/presentation/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { Image, StyleSheet, Text, View } from "react-native";
 
-
-interface Props {
-  actor: Cast;
-}
-
-export const ActorCard = ({ actor }: Props) => {
-  return (
-    <View className="mx-10 w-[60px]">
+export const ActorCard = ({ actor }: { actor: Cast }) => (
+  <View style={styles.card}>
+    <View style={styles.avatar}>
+      <Ionicons name="person-outline" size={26} color={cinema.muted} />
       <Image
         source={{ uri: actor.avatar }}
-        className="w-[100px] h-[150] rounded-2xl shadow"
+        style={StyleSheet.absoluteFill}
         resizeMode="cover"
       />
-
-      <View>
-        <Text
-          numberOfLines={2}
-          adjustsFontSizeToFit
-          className="font-bold text-lg"
-        >
-          {actor.name}
-        </Text>
-        <Text className="text-gray-600 text-xs">{actor.character}</Text>
-      </View>
     </View>
-  );
-};
+    <Text numberOfLines={2} style={styles.name}>
+      {actor.name}
+    </Text>
+    <Text numberOfLines={2} style={styles.character}>
+      {actor.character}
+    </Text>
+  </View>
+);
+
+const styles = StyleSheet.create({
+  card: { width: 88 },
+  avatar: {
+    height: 106,
+    width: 88,
+    borderRadius: 14,
+    backgroundColor: cinema.surface,
+    overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 10,
+  },
+  name: { color: cinema.text, fontSize: 11, fontWeight: "600", lineHeight: 16 },
+  character: {
+    color: cinema.muted,
+    fontSize: 10,
+    marginTop: 4,
+    lineHeight: 14,
+  },
+});

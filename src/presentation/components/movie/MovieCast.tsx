@@ -1,27 +1,43 @@
-import { Cast } from '@/infrastructure/interfaces/cast';
-import React from 'react';
-import { Text, View } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
-import { ActorCard } from './ActorCard';
+import type { Cast } from "@/domain/entities/cast.entity";
+import { cinema } from "@/presentation/theme";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { ActorCard } from "./ActorCard";
 
-
-interface Props {
-    cast: Cast[];
+export default function MovieCast({ cast }: { cast: Cast[] }) {
+  if (!cast.length) return null;
+  return (
+    <View style={styles.section}>
+      <View style={styles.heading}>
+        <Text style={styles.title}>Quienes dan vida a la historia</Text>
+        <Text style={styles.subtitle}>EL REPARTO</Text>
+      </View>
+      <FlatList
+        horizontal
+        data={cast}
+        keyExtractor={(item) => item.id.toString()}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 24 }}
+        ItemSeparatorComponent={() => <View style={{ width: 14 }} />}
+        renderItem={({ item }) => <ActorCard actor={item} />}
+      />
+    </View>
+  );
 }
 
-const MovieCast = ({cast}:Props) => {
-    return (
-        <View className='mt-5 mb-20'>
-            <Text className='font-bold text-2xl px-5'>MovieCast</Text>
-            <FlatList
-            data={cast}
-            keyExtractor={(item) => item.id.toString()}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            renderItem={({item})=> <ActorCard actor={item}></ActorCard>}
-            />
-        </View>
-    )
-}
-
-export default MovieCast
+const styles = StyleSheet.create({
+  section: { marginTop: 30 },
+  heading: { paddingHorizontal: 24, marginBottom: 18 },
+  title: {
+    color: cinema.text,
+    fontSize: 20,
+    fontWeight: "700",
+    letterSpacing: -0.5,
+  },
+  subtitle: {
+    color: cinema.accent,
+    fontSize: 8,
+    letterSpacing: 1.8,
+    marginTop: 7,
+    fontWeight: "700",
+  },
+});

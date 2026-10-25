@@ -1,32 +1,26 @@
-import { View, Text } from 'react-native'
-import React from 'react'
 import "../global.css";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
-import { Stack } from 'expo-router';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { cinema } from "@/presentation/theme";
 
+const queryClient = new QueryClient();
 
-// Create a client
-const queryClient = new QueryClient()
-
-const RootLayout = () => {
-
+export default function RootLayout() {
   return (
-    <GestureHandlerRootView>
+    <GestureHandlerRootView
+      style={{ flex: 1, backgroundColor: cinema.background }}
+    >
       <QueryClientProvider client={queryClient}>
+        <StatusBar style="light" />
         <Stack
           screenOptions={{
-            headerShown: false
+            headerShown: false,
+            contentStyle: { backgroundColor: cinema.background },
           }}
-        ></Stack>
+        />
       </QueryClientProvider>
     </GestureHandlerRootView>
-
-
-  )
+  );
 }
-
-export default RootLayout

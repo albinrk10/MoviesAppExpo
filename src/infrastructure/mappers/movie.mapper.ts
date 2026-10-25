@@ -1,4 +1,4 @@
-import { CompleteMovie, Movie } from "../interfaces/movie.interface";
+import type { CompleteMovie, Movie } from "@/domain/entities/movie.entity";
 import { MovieDBMovieResponse } from "../interfaces/moviedb-movie.response";
 import { Result } from "../interfaces/moviedb-response";
 

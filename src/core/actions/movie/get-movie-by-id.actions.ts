@@ -1,5 +1,5 @@
 import { movieApi } from "@/core/api/movie-api";
-import { CompleteMovie } from "@/infrastructure/interfaces/movie.interface";
+import type { CompleteMovie } from "@/domain/entities/movie.entity";
 import { MovieDBMovieResponse } from "@/infrastructure/interfaces/moviedb-movie.response";
 import { MovieMapper } from "@/infrastructure/mappers/movie.mapper";
 

@@ -1,4 +1,4 @@
-import { Cast } from "../interfaces/cast";
+import type { Cast } from "@/domain/entities/cast.entity";
 import { MovieDBCast } from "../interfaces/moviedb-credits.response";
 
 export class CastMapper {
